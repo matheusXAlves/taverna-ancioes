@@ -49,29 +49,16 @@ p{
 		font-weight:bold;
 }
 .Botão1{
-	    position:relative;
-		top:190px;
-		right:240px;
 		background-color: #5cb85c;
 }
 .Botão2{
-	    position:relative;
-		top:190px;
-		right:240px;
 		background-color: #5cb85c;
 }
 .Botão3{
-	    position:relative;
-		top:190px;
-		right:240px;
 		background-color: #5cb85c;
 }
 .Botão{
-	    position: relative;
-        top: -10px;
-        left: 1600px;
         background-color: #5bc0de;
-        width: 190px;
 }
 .Botão4{
     background-color: #d1cece;
