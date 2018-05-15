@@ -1,0 +1,45 @@
+version: "2"
+
+services:
+
+    php:
+        image: igorgsarmento/php5.6-apache
+        ports:
+            - "80:80"
+        environment:
+            DB_HOST: mysql
+            DB_DATABASE: taverna_ancioes
+            DB_USERNAME: tavernaancioes
+            DB_PASSWORD: tavernaancioes
+        volumes:
+            - .:/var/www/html
+        depends_on:
+            - mysql
+        links:
+            - mysql
+
+    mysql:
+        image: mysql:5.7
+        restart: always
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: taverna_ancioes
+            MYSQL_USER: tavernaancioes
+            MYSQL_PASSWORD: tavernaancioes
+            MYSQL_ROOT_PASSWORD: admin
+        volumes:
+            - mysql-data:/var/lib/mysql
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+        depends_on:
+            - mysql
+        links:
+            - mysql
+
+volumes:
+    mysql-data:
