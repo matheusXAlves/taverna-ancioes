@@ -10,11 +10,11 @@
 			<h3>EVENTOS</h3>
 		 <div class="row">
 			<div class="col-sm-4">
+				<a href="#"> 
+			    	<img src="https://i0.wp.com/www.wizards.com/dnd/images/Tyranny_Wallpaper.jpg" class="img-rounded" alt="Image" width="400" height="300">
+				</a> 
 				<h3>Evento 1</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a href="#"> 
-					<img src="Cac4.png" alt="Image" width="350" height="500">
-				</a>
 				<div class="container-fluid text-center">
 					<a href="#" class="Botão1 btn btn-success btn-lg">
 						<span class="glyphicon glyphicon-ok"></span> Participar 
@@ -22,11 +22,12 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
+				<a href="#"> 
+			    	<img src="https://i.ytimg.com/vi/qJzEXAwBhFw/maxresdefault.jpg" class="img-rounded" alt="Image" width="400" height="300">
+				</a>
 				<h3>Evento 2</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a href="#"> 
-					<img src="Cac4.png" alt="Image" width="350" height="500">
-				</a>
+				
 				<div class="container-fluid text-center">
 					<a href="#" class="Botão2 btn btn-success btn-lg">
 						<span class="glyphicon glyphicon-ok"></span> Participar 
@@ -34,11 +35,11 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
+				<a href="#"> 
+			    	<img src="https://dnd35.files.wordpress.com/2013/08/thelastthreshold_2560x1600_wallpaper.jpg?w=683&h=426" class="img-rounded" alt="Image" width="400" height="300">
+				</a>
 				<h3>Evento 3</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a href="#"> 
-					<img src="Cac4.png" alt="Image" width="350" height="500">
-				</a>
 				<div class="container-fluid text-center">
 					<a href="#" class="Botão3 btn btn-success btn-lg">
 						<span class="glyphicon glyphicon-ok"></span> Participar 
