@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql',
+	'hostname' => '127.0.0.1',
 	'username' => 'root',
-	'password' => 'admin',
+	'password' => 'matheusx456',
 	'database' => 'taverna_ancioes',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
