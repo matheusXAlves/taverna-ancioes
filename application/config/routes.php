@@ -53,7 +53,18 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['cadastro-login'] = 'Usuario/index';
+
+$route['cadastro/usuario'] = 'Cadastra_Usuario/index';
+$route['cadastro/usuario/add'] = 'Cadastra_Usuario/salvar';
+
+$route['login/usuario'] = 'Login_Usuario/index';
+$route['login/usuario/logar'] = 'Login_Usuario/logar';
+$route['login/usuario/deslogar'] = 'Login_Usuario/logout';
+
 $route['grupos'] = 'Grupos/index';
+$route['grupos/criar-grupo'] = 'Criar_Grupos/Criar_Grupo';
+$route['grupos/criar-grupo/add'] = 'Criar_Grupos/Salvar_Grupo';
 
 
 $route['eventos'] = 'Eventos/index';
