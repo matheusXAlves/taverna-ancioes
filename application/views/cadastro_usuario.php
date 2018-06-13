@@ -4,7 +4,7 @@
 		<div class="form-group">
 			<label class=" control-label" for="NME_USUARIO">Nome Completo</label>  
 			<div class="">
-				<input id="NME_USUARIO" name="nme_usuario" type="text" placeholder="Nome do Grupo" class="form-control input-md">
+				<input id="NME_USUARIO" name="nme_usuario" type="text" placeholder="Nome Completo" class="form-control input-md">
 			</div>
 		</div>
 
@@ -12,7 +12,7 @@
 		<div class="form-group">
 			<label class=" control-label" for="EMAIL_USUARIO">Email</label>  
 			<div class="">
-				<input id="EMAIL_USUARIO" name="email_usuario" type="text" placeholder="Nome do Grupo" class="form-control input-md">
+				<input id="EMAIL_USUARIO" name="email_usuario" type="text" placeholder="Email" class="form-control input-md">
 			</div>
 		</div>
 
@@ -20,7 +20,7 @@
 		<div class="form-group">
 			<label class=" control-label" for="LOGIN_USUARIO">Usuario</label>  
 			<div class="">
-				<input id="LOGIN_USUARIO" name="login_usuario" type="text" placeholder="Nome do Grupo" class="form-control input-md">
+				<input id="LOGIN_USUARIO" name="login_usuario" type="text" placeholder="Usuario" class="form-control input-md">
 			</div>
 		</div>
 

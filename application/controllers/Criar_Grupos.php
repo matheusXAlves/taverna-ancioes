@@ -13,8 +13,10 @@ class Criar_Grupos extends MY_Controller {
 	public function Salvar_Grupo()
 	{
 		$dados = $this->input->post();
-
-		$dados['id_usuario'] = 1;
+		
+		if(!isset($dados['id_usuario'])){
+			$dados['id_usuario'] = $this->session->userdata('usuario_logado')['id_usuario'];
+		}
 
 		$status = $this->Model_Grupo->Insert($dados);
 

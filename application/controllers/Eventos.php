@@ -20,6 +20,7 @@ class Eventos extends MY_Controller {
 	 */
 	public function index()
 	{
+		var_dump($this->session->userdata('usuario_logado'));
 		$this->load->view('templates/header');
 		$this->load->view('eventos');
 		$this->load->view('templates/footer');

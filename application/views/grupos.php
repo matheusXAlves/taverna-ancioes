@@ -2,7 +2,7 @@
 		<div class="container-fluid bg-4 text-center">
 	     	<h2>Encontre Grupos para Entrar</h2>
 	     	<h3>ou</h3>
-	     	<a href="#" class="Botão4 btn btn-default btn-lg"> 
+	     	<a href="<?= base_url('grupos/criar-grupo') ?>" class="Botão4 btn btn-default btn-lg"> 
      			<strong>Crie um Grupo</strong>
 	        <span class="glyphicon glyphicon-pencil"></span>
 	    </a>

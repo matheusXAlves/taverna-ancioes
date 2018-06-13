@@ -2,15 +2,15 @@
 	<fieldset>
 		<!-- Text input-->
 		<div class="form-group">
-			<label class=" control-label" for="LOGIN_USUARIO">Nome do Grupo:</label>  
+			<label class=" control-label" for="LOGIN_USUARIO">Usuario:</label>  
 			<div class="">
-				<input id="LOGIN_USUARIO" name="login_usuario" type="text" placeholder="Nome do Grupo" class="form-control input-md">
+				<input id="LOGIN_USUARIO" name="login_usuario" type="text" placeholder="Usuario" class="form-control input-md">
 			</div>
 		</div>
 
 		<!-- Text input-->
 		<div class="form-group">
-			<label class=" control-label" for="SENHA_USUARIO">Nome do Grupo:</label>  
+			<label class=" control-label" for="SENHA_USUARIO">Senha:</label>  
 			<div class="">
 				<input id="SENHA_USUARIO" name="senha_usuario" type="password" placeholder="Senha" class="form-control input-md">
 			</div>
