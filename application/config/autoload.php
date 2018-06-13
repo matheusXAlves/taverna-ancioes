@@ -145,5 +145,6 @@ $autoload['language'] = array();
 $autoload['model'] = array(
 	'MY_Model',
 	'Model_Grupo',
+	'Model_Evento',
 	'Model_Usuario',
 );

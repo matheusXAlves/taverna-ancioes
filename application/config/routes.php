@@ -68,3 +68,5 @@ $route['grupos/criar-grupo/add'] = 'Criar_Grupos/Salvar_Grupo';
 
 
 $route['eventos'] = 'Eventos/index';
+$route['eventos/criar-eventos'] = 'Criar_Eventos/Criar_Evento';
+$route['eventos/criar-eventos/add'] = 'Criar_Eventos/Salvar_Evento';
