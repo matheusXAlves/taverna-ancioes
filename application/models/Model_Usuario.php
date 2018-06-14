@@ -21,4 +21,16 @@ class Model_Usuario extends MY_Model {
             return null;
         }
     }
+
+    function GetEmail($email_usuario){
+        if(is_null($email_usuario))
+            return false;
+        $this->db->where('email_usuario', $email_usuario);
+        $query = $this->db->get($this->table);
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
+        } else {
+            return null;
+        }
+    }
 }

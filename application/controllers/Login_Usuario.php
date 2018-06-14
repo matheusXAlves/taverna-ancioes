@@ -16,15 +16,20 @@ class Login_Usuario extends CI_Controller {
         $senha = sha1($dados['senha_usuario']);
 
         $usuario_db = $this->Model_Usuario->GetUser($dados['login_usuario']);
+
+        if(!is_null($usuario_db))
+            $status = FALSE;
+              
         
         if ($usuario == $usuario_db['login_usuario'] && $senha == $usuario_db['senha_usuario']) {
 			$this->session->set_userdata("usuario_logado", $usuario_db);
 			$this->session->set_flashdata("success", "Logado com sucesso!");
 			redirect(base_url('home'));
 		} else {
-			$this->session->set_flashdata("danger", "CPF/CNPJ ou senha invalidos!");
-			$this->load->view('login_cadastro', $dados);
+			$this->session->set_flashdata("error", "Usuario ou senha estão incorretos!");
+			redirect(base_url('cadastro-login'));
 		}
+		$this->load->view('login_cadastro', $dados);
     }
 
 

@@ -21,7 +21,15 @@ class Grupos extends MY_Controller {
 	public function index()
 	{
 		$this->load->view('templates/header');
-		$this->load->view('grupos');
+
+		$data = $this->Model_Grupo->GetAll();
+		
+		if ($data == null) {
+			$this->load->view('pesquisa_erro');
+		} else {
+			$this->load->view('grupos', array('grupos' => $data));
+		}
+
 		$this->load->view('templates/footer');
 	}
 }

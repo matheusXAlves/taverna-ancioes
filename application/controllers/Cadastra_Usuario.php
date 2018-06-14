@@ -9,20 +9,27 @@ class Cadastra_Usuario extends CI_Controller {
 	}
 	
 	public function Salvar() {
-            $dados = $this->input->post();
+        $dados = $this->input->post();
 
-            $senha_encrypt = sha1($dados['senha_usuario']);
+        $senha_encrypt = sha1($dados['senha_usuario']);
 
-            $dados['senha_usuario'] = $senha_encrypt;
+        $dados['senha_usuario'] = $senha_encrypt;
 
+        $email_existe = $this->Model_Usuario->GetEmail($dados['email_usuario']);
+
+        if(is_null($email_existe)){
             $status = $this->Model_Usuario->Insert($dados);
+        }else {
+            $status = FALSE;
+        }
 
-            if(!$status){
-                $this->session->set_flashdata('error', 'Não foi possível cadastrar o usuario');
-            }else{
-                $this->session->set_flashdata('success', 'Usuario cadastrado com sucesso.');
-                redirect(base_url('cadastro-login'));
-            }
+        if(!$status){
+            $this->session->set_flashdata('error', 'Esse email já está sendo utilizado!');
+            redirect(base_url('cadastro-login'));
+        }else{
+            $this->session->set_flashdata('success', 'Usuario cadastrado com sucesso.');
+            redirect(base_url('cadastro-login'));
+        }
 
 
         $this->load->view('cadastro_usuario', $dados);

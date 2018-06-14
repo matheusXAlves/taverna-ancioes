@@ -20,9 +20,16 @@ class Eventos extends MY_Controller {
 	 */
 	public function index()
 	{
-		var_dump($this->session->userdata('usuario_logado'));
 		$this->load->view('templates/header');
-		$this->load->view('eventos');
+		
+		$data = $this->Model_Evento->GetAll();
+		
+		if ($data == null) {
+			$this->load->view('pesquisa_erro');
+		} else {
+			$this->load->view('eventos', array('eventos' => $data));
+		}
+
 		$this->load->view('templates/footer');
 	}
 }

@@ -18,6 +18,10 @@ class Criar_Eventos extends MY_Controller {
 			//$dados['id_usuario'] = $this->session->userdata('usuario_logado')['id_usuario'];
 		}
 
+		$dt_evento = $dados['dta_evento'];
+
+        $dados['dta_evento'] = date('Y-m-d', strtotime($dt_evento));
+
 		$status = $this->Model_Evento->Insert($dados);
 
         if(!$status){

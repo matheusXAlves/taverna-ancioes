@@ -9,16 +9,29 @@
 	   	</div>
 
 		<br>
+
+		<?php
+			//Columns must be a factor of 12 (1,2,3,4,6,12)
+			$numOfCols = 3;
+			$rowCount = 0;
+		?>
+
 		<div class="row">
+			<?php foreach ($eventos as $indice => $evento) :?>
 			<div class="col-md-4">
 				<div class="card text-center">
 					<img src="https://dnd35.files.wordpress.com/2013/08/thelastthreshold_2560x1600_wallpaper.jpg?w=683&h=426" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
 					<h3 class="card-header">
-						Evento 1
+						<?=$evento['nme_evento']?>
 					</h3>
 					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						<p class="card-text" style="word-wrap: break-word;">
+							Descrição do evento: <?=$evento['info_evento']?>
+						</p>
+						<p class="card-text"">
+							Data do Evento: <?=date('d/m/Y', strtotime($evento['dta_evento']));?>
+							<br>
+							Tipo de Jogo: <?=$evento['tipo_jogo']?>
 						</p>
 						<a href="#" class="Botão3 btn btn-success btn-lg">
 							<span class="glyphicon glyphicon-ok"></span> Participar 
@@ -26,96 +39,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<img src="https://i.ytimg.com/vi/qJzEXAwBhFw/maxresdefault.jpg" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
-					<h3 class="card-header">
-						Evento 2
-					</h3>
-					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<a href="#" class="Botão3 btn btn-success btn-lg">
-							<span class="glyphicon glyphicon-ok"></span> Participar 
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<img src="https://i0.wp.com/www.wizards.com/dnd/images/Tyranny_Wallpaper.jpg" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
-					<h3 class="card-header">
-						Evento 3
-					</h3>
-					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<a href="#" class="Botão3 btn btn-success btn-lg">
-							<span class="glyphicon glyphicon-ok"></span> Participar 
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<br><br><br>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card text-center">
-					<img src="https://dnd35.files.wordpress.com/2013/08/thelastthreshold_2560x1600_wallpaper.jpg?w=683&h=426" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
-					<h3 class="card-header">
-						Evento 4
-					</h3>
-					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<a href="#" class="Botão3 btn btn-success btn-lg">
-							<span class="glyphicon glyphicon-ok"></span> Participar 
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<img src="https://i.ytimg.com/vi/qJzEXAwBhFw/maxresdefault.jpg" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
-					<h3 class="card-header">
-						Evento 5
-					</h3>
-					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<a href="#" class="Botão3 btn btn-success btn-lg">
-							<span class="glyphicon glyphicon-ok"></span> Participar 
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<img src="https://i0.wp.com/www.wizards.com/dnd/images/Tyranny_Wallpaper.jpg" class="img-rounded img-responsive img-thumbnail" alt="Image" width="400" height="300">
-					<h3 class="card-header">
-						Evento 6
-					</h3>
-					<div class="card-body">
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<a href="#" class="Botão3 btn btn-success btn-lg">
-							<span class="glyphicon glyphicon-ok"></span> Participar 
-						</a>
-					</div>
-				</div>
-			</div>
+			<?php
+			    $rowCount++;
+			    if($rowCount % $numOfCols == 0) echo '</div><br><br><div class="row">';
+			?>
+			<?php endforeach ?>
 		</div>
 
-	</div>
-
-	<div class="container-fluid text-center">
-		<a href="#" class="Botão btn btn-info btn-lg"> Próxima Página
-			<span class="glyphicon glyphicon-arrow-right"></span>
-		</a>
 	</div>
